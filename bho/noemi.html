@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NOIA</title> 
+  <link rel="stylesheet" href="style.css">      <!--collega il file css-->
+</head>
+<body>
+  <h1>Edit Profile</h1>
+  <form action="https://www.google.com/" method="get"> 
+
+
+<!--action link google il get serve per mostrare-->    
+
+    <label>Your profile photo:
+      <input type="file" name="profile_photo">  
+    </label>  <!--sserve per scrivere dentro una stringa-->
+    <br>
+    <label>Your first name:
+    </label><br>
+    <br><input type="text" name="first_name">
+    <br><label>Your last name: 
+    </label>
+    <br><br> <input type="text" name="last_name">
+
+    <br><label>Gender:</label><br> <!--scegliere il genere -->
+    <input type="radio" name="genere" value="femminile"> femminile
+    <input type="radio" name="genere" value="maschio"> maschile
+      <input type="radio" name="genere" value="altro"> altro
+    <br><br>    <!--  per andare a capo-->
+
+
+<!--data di compleanno-->
+<div class="data-nascita"> 
+  <label for="">birthday</label>
+  <input type="date" id="birthday" name="birthday">
+
+</div>
+    <br>
+    <!-- Messaggio informativo, non visibile nel profilo pubblico -->
+    <small>This is hidden by default from your profile.</small>
+    <br><br>
+    <!-- Campo per inserire informazioni personali -->
+    <label>About You:<br>
+      <textarea name="about_you" rows="5" cols="40"></textarea>
+    </label>
+    <br><br>
+    <!-- Campo per inserire l'URL del proprio sito web -->
+    <label>Your web site url:  
+    </label><br><input type="url" name="website_url">
+    <br><br>
+    <!-- Campo per inserire il nome del sito web -->
+    <label>Your web site name:
+    </label><br> <input type="text" name="website_name">
+    <br><br>
+    <!-- Pulsante per inviare il modulo -->
+    <input type="submit" value="create profile >">
+  </form>
+</body>
+</html>
