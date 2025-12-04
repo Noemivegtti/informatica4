@@ -1,22 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ESERCIZIO</title>
-</head>
-<body>
-    <H1>numeri</H1>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ESERCIZIO</title>
+    </head>
+            <body>
+                <H1>numeri</H1>
+                
+                <form action="calcolatrice.php" method="POST">
+                <label for="nome"> inserisci il nome</label>
+                <input type="text" name = nome><br><br>
+                <label for="n1">numero 1</label>
+                <input type="number"name="n1">
+                <label for="n2">numero 2</label>
+                <input type="number"name="n2">
+                <label for="operazione">scegli l'operazione:</label>
+                <select name="calcolo" id="">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                    <option value="x">x</option>
+                    <option value="/">/</option>
+                </select>
 
-    <form action="somma.php" method="POST">
-   <label for="nome"> inserisci il nome</label>
-     <input type="text" name = nome><br><br>
-    <label for="n1">numero 1</label>
-    <input type="number"name="n1">
-    <label for="n2">numero 2</label>
-    <input type="number"name="n2">
-    <input type="submit"name="submit">
-    </form>
-
-</body>
-</html>
+                <input type="submit"name="submit">
+                </form>
+                                                    
+            </body>
+</html>>

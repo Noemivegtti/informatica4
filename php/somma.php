@@ -5,4 +5,5 @@ $somma = $A + $B;
 $nome = $_POST['nome'];
 echo "ciao $nome la somma e $somma";
 
+
 ?>
