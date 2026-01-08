@@ -5,7 +5,7 @@ $conn = new mysqli("localhost", "root", "", "gestione_studenti");
 // Controllo connessione
 if ($conn->connect_error) {
     die("Connessione fallita: " . $conn->connect_error);
-}q
+}
 
 // Dati dello studente da inserire
 $nome = "Mari";
