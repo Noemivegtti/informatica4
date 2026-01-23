@@ -8,7 +8,7 @@ if ($conn->connect_error) {
 
 
 $co = $_POST['condizione'];
-$mostraVoto = true; // di default mostriamo il voto
+$mostraVoto = true;       // di default mostriamo il voto
 
 
 switch ($co) {
