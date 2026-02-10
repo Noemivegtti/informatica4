@@ -1,26 +1,39 @@
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="style.css">
-    <title>Scegli condizione</title>
-  </head>
-  <body>
-    <h2>Scegli condizione</h2>
+<head>
+    <title>Inserisci Studente</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Inserisci Studente</h2>
 
-    <form action="voti.php" method="post">
+        <form action="insert.php" method="POST">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" required>
 
-     <label for="condizione">Condizione</label>
-      <select name="condizione">
-        <option value="studenti con voto sufficente">voto sufficente</option>
-        <option value="studenti con voto pari a 10">voto pari a 10</option>
-        <option value="Cognome simili">cognome simili</option>
-      </select>
- 
+            <label for="cognome">Cognome:</label>
+            <input type="text" id="cognome" name="cognome" required>
 
-      <br><br>
-      <input type="submit" value="invia scelta">
-    </form>
-  </body>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email" required>
+
+            <label for="data_nascita">Data di Nascita:</label>
+            <input type="date" id="data_nascita" name="data_nascita" required>
+
+            <input type="submit" value="Inserisci">
+        </form>
+
+        <br>
+
+        <!-- Pulsante per visualizzare gli studenti -->
+        <form action="view.php" method="GET">
+            <input type="submit" value="Visualizza Studenti">
+        </form>
+
+        <br>
+
+        <a href="inserisci_stud.html">Torna alla home</a>
+    </div>
+</body>
 </html>
