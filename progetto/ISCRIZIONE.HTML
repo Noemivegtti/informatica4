@@ -1,0 +1,120 @@
+
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Stupendo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>FORM DA COMPILARE</h1>
+
+    <form action="https://www.google.com/" method="POST">
+        <!-- FOTO PROFILO -->
+        <div class="form-group">
+            <label for="file">Profile Photo:</label>
+            <input type="file" id="file" name="file">
+        </div><br>
+
+        <!-- NOME -->
+        <div class="form-group">
+            <label for="fname">Nome:</label>
+            <input type="text" id="fname" name="fname" placeholder="emma" required>
+        </div><br>
+
+        <!-- COGNOME -->
+        <div class="form-group">
+            <label for="lname">Cognome:</label>
+            <input type="text" id="lname" name="lname" placeholder="hysa" required>
+        </div><br>
+
+        <!-- MAIL -->
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email">
+        </div><br>
+
+        <!-- PASSWORD -->
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" minlength="8" name="password" required>
+        </div><br>
+
+        <!-- DATA DI NASCITA -->
+        <div class="form-group">
+            <label for="date">Data di Nascita:</label>
+            <input type="date" id="date" name="date">
+        </div><br>
+
+        <!-- RUOLO PRINCIPALE -->
+        <div class="form-group">
+            <label for="settore">Settore:</label>
+            <select id="settore" name="settore">
+                <option value="" disabled selected>Seleziona...</option>
+                <option value="frontend">Frontend</option>
+                <option value="backend">Backend</option>
+                <option value="ui-ux">UI/UX</option>
+                <option value="data-science">Data Science</option>
+            </select>
+        </div><br>
+
+        <!-- LIVELLO ESPERIENZA -->
+        <div class="form-group">
+            <label>Livello Esperienza:</label>
+            <div class="radio-group">
+                <input type="radio" id="junior" name="livello_esperienza" value="junior" checked>
+                <label for="junior">Junior</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" id="mid" name="livello_esperienza" value="mid">
+                <label for="mid">Mid</label>
+            </div>
+            <div class="radio-group">
+                <input type="radio" id="senior" name="livello_esperienza" value="senior">
+                <label for="senior">Senior</label>
+            </div>
+        </div><br>
+
+        <!-- COMPETENZE -->
+        <div class="form-group">
+            <p>Seleziona una o più opzioni:</p>
+            <label>
+                <input type="checkbox" name="competenze[]" value="html-css"> HTML/CSS
+            </label><br>
+            <label>
+                <input type="checkbox" name="competenze[]" value="javascript"> JavaScript
+            </label><br>
+            <label>
+                <input type="checkbox" name="competenze[]" value="python"> Python
+            </label><br>
+            <label>
+                <input type="checkbox" name="competenze[]" value="sql"> SQL
+            </label>
+        </div><br>
+
+        <!-- ALLEGATO CV -->
+        <div class="form-group">
+            <label for="documento">Carica PDF:</label>
+            <input type="file" id="documento" name="documento" accept=".pdf">
+        </div><br>
+
+        <!-- NOTE/BIO -->
+        <div class="form-group">
+            <label for="presentazione">Note BIO:</label>
+            <textarea id="presentazione" name="presentazione" rows="4" maxlength="300" placeholder="Scrivi una breve descrizione (max 300 caratteri)..."></textarea>
+        </div><br>
+
+        <!-- REGOLAMENTO -->
+        <div class="form-group">
+            <input type="checkbox" id="termini" name="termini" required>
+            <label for="termini">Accetto i termini e le condizioni *</label>
+        </div><br>
+
+        <!-- SUBMIT -->
+        <div class="form-group">
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</body>
+</html>

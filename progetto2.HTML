@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>TechNova Hackathon - Registrazione</title>
+</head>
+<body>
+
+    <h1>Form di Iscrizione Hackathon 'TechNova'</h1>
+    <p>Compila tutti i campi richiesti.</p>
+
+    <form action="https://www.ITCSerasmo.it" method="post">
+
+        <!-- Primo Fieldset: Dati Anagrafici -->
+        <fieldset>
+            <legend>Dati Anagrafici</legend>
+            <table border="0" cellpadding="5">
+                <tr>
+                    <td><label for="nome">Nome *</label></td>
+                    <td><label for="cognome">Cognome *</label></td>
+                    <td><label for="email">Email *</label></td>
+                    <td><label for="password">Password *</label></td>
+                    <td><label for="data_nascita">Data di Nascita *</label></td>
+                </tr>
+                <tr>
+                    <td><input type="text" id="nome" name="nome" value="Mario" required></td>
+                    <td><input type="text" id="cognome" name="cognome" value="Rossi" required></td>
+                    <td><input type="email" id="email" name="email" value="mario.rossi@email.it" required></td>
+                    <td><input type="password" id="password" name="password" value="********" required></td>
+                    <td><input type="date" id="data_nascita" name="data_nascita" value="1995-05-15" required></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <br>
+
+        <!-- Secondo Fieldset: Profilo Tecnico -->
+        <fieldset>
+            <legend>Profilo Tecnico</legend>
+            <table border="0" cellpadding="10" valign="top">
+                <tr align="left" valign="top">
+                    <!-- Colonna Ruolo -->
+                    <td>
+                        <label for="ruolo">Ruolo Principale *</label><br>
+                        <select id="ruolo" name="ruolo" required>
+                            <option value="" disabled>Seleziona...</option>
+                            <option value="frontend" selected>Frontend</option>
+                            <option value="backend">Backend</option>
+                            <option value="fullstack">Fullstack</option>
+                            <option value="designer">UI/UX Designer</option>
+                        </select>
+                    </td>
+
+                    <!-- Colonna Livello Esperienza -->
+                    <td>
+                        <label>Livello Esperienza *</label><br>
+                        <input type="radio" id="junior" name="livello" value="junior">
+                        <label for="junior">Junior</label><br>
+                        <input type="radio" id="mid" name="livello" value="mid" checked>
+                        <label for="mid">Mid</label><br>
+                        <input type="radio" id="senior" name="livello" value="senior">
+                        <label for="senior">Senior</label>
+                    </td>
+
+                    <!-- Colonna Competenze -->
+                    <td>
+                        <label>Competenze</label><br>
+                        <input type="checkbox" id="html_css" name="competenze" value="html_css" checked>
+                        <label for="html_css">HTML/CSS</label><br>
+                        <input type="checkbox" id="javascript" name="competenze" value="javascript" checked>
+                        <label for="javascript">JavaScript</label><br>
+                        <input type="checkbox" id="python" name="competenze" value="python">
+                        <label for="python">Python</label><br>
+                        <input type="checkbox" id="sql" name="competenze" value="sql">
+                        <label for="sql">SQL</label>
+                    </td>
+
+                    <!-- Colonna Allegato e Note -->
+                    <td>
+                        <label for="cv">Allegato CV *</label><br>
+                        <input type="file" id="cv" name="cv" accept=".pdf,.doc,.docx" required>
+                        <br><br>
+                        <label for="note">Note/Bio *</label><br>
+                        <textarea id="note" name="note" maxlength="300" rows="3" cols="30" required>mario.rossi@email.it/note/ text</textarea>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <br>
+
+        <!-- Terzo Fieldset: Conferma e Privacy -->
+        <fieldset>
+            <legend>Conferma e Privacy</legend>
+            <p>Regolamento</p>
+            <input type="checkbox" id="privacy" name="privacy" checked required>
+            <label for="privacy">Accetto i termini e le condizioni</label>
+        </fieldset>
+
+        <br>
+
+        <!-- Quarto Fieldset: Sfida Extra -->
+        <fieldset>
+            <legend>Sfida Extra</legend>
+            <table border="0" cellpadding="5">
+                <tr>
+                    <td><label for="taglia">Taglia Maglietta *</label></td>
+                    <td><label for="colore_badge">Colore Badge *</label></td>
+                </tr>
+                <tr>
+                    <td><input type="number" id="taglia" name="taglia" value="3" min="1" max="5" required></td>
+                    <td><input type="color" id="colore_badge" name="colore_badge" value="#4CAF50" required></td>
+                </tr>
+            </table>
+        </fieldset>
+
+        <br>
+
+        <!-- Pulsanti di Invio e Reset affiancati -->
+        <button type="submit">Invia Iscrizione</button>
+        <button type="reset">Resetta Form</button>
+
+    </form>
+
+</body>
+</html>
