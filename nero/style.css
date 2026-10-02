@@ -1,0 +1,29 @@
+h1 {
+    color: rgb(247, 246, 246);
+}
+
+h2 {
+    color: blue;
+}
+.cool {
+    color: rgb(7, 220, 248);
+    background-color: grey;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+body{
+    background-image: url('zeromskiego-street.jpg');
+}
+.giallo{
+    background-color: rgb(229, 255, 0);
+}
+.verde{
+    background-color: rgb(5, 255, 38);
+}
+.evidenziato {
+  background-color: #ffeb3b; /* Colore dell'evidenziatore */
+  color: #000;              /* Colore del testo */
+  padding: 2px 8px;         /* Spazio interno per non attaccare lo sfondo alle lettere */
+  border-radius: 4px;       /* Angoli leggermente smussati */
+  display: inline-block;    /* Garantisce che larghezza e altezza seguano il contenuto */
+}
