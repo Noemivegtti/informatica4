@@ -1,0 +1,179 @@
+/* Impostazioni generali della pagina */
+* {
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #f0f4f8;
+  display: flex;
+  justify-content: center;
+  padding: 30px 15px;
+}
+
+/* Card principale */
+.card {
+  background-color: #ffffff;
+  border: 1px solid #dcdfe6;
+  border-radius: 8px;
+  max-width: 600px;
+  width: 100%;
+  padding: 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Intestazione */
+.header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  color: #1a365d;
+  font-size: 22px;
+  letter-spacing: 1px;
+}
+
+.header .subtitle {
+  color: #4a5568;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+/* Banner Informativo */
+.info-box {
+  background-color: #ebf8ff;
+  border-left: 4px solid #3182ce;
+  padding: 15px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #2b6cb0;
+  margin-bottom: 25px;
+}
+
+.info-box p {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.info-box ul {
+  list-style: none;
+  padding-left: 10px;
+}
+
+.info-box li {
+  margin-top: 3px;
+}
+
+/* Gruppi di campi (Fieldset) */
+fieldset {
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  padding: 15px 20px;
+  margin-bottom: 25px;
+}
+
+legend {
+  color: #3182ce;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 0 8px;
+}
+
+/* Singoli elementi del modulo */
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: bold;
+  color: #4a5568;
+  margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e0;
+  border-radius: 5px;
+  font-size: 14px;
+  outline: none;
+  color: #2d3748;
+}
+
+textarea {
+  height: 80px;
+  resize: vertical;
+}
+
+/* Stati speciali dei campi (come nell'immagine) */
+.input-valid {
+  border: 2px solid #38a169 !important; /* Bordo verde */
+}
+
+.input-focused {
+  border: 2px solid #3182ce !important; /* Bordo blu attivo */
+}
+
+/* Radio button e Checkbox */
+.radio-group,
+.checkbox-group {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.radio-group label,
+.checkbox-group label,
+.checkbox-privacy label {
+  font-weight: normal;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  cursor: pointer;
+}
+
+/* Pulsanti */
+.button-group {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+button {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #3182ce;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #2b6cb0;
+}
+
+.btn-secondary {
+  background-color: #e2e8f0;
+  color: #4a5568;
+}
+
+.btn-secondary:hover {
+  background-color: #cbd5e0;
+}

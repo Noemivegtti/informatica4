@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <title>Tech Conference 2026</title>
+  <style>
+    /* Stili di base */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      padding: 20px;
+    }
+
+    /* Contenitore bianco al centro */
+    .modulo {
+      background-color: white;
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #1a365d;
+    }
+
+    /* Riquadro informativo blu */
+    .box-info {
+      background-color: #e6f2ff;
+      border-left: 4px solid #0066cc;
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 14px;
+    }
+
+    /* Sezioni con bordo */
+    fieldset {
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 15px;
+      padding: 15px;
+    }
+
+    legend {
+      color: #0066cc;
+      font-weight: bold;
+      padding: 0 5px;
+    }
+
+    /* Campi di testo e menù */
+    label {
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box; /* Mantiene la larghezza corretta */
+    }
+
+    /* Stili evidenziati come nell'immagine */
+    .bordo-verde { border: 2px solid green; }
+    .bordo-blu { border: 2px solid #0066cc; }
+
+    /* Pulsanti */
+    .pulsanti {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    button {
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .btn-invia {
+      background-color: #0066cc;
+      color: white;
+    }
+
+    .btn-azzera {
+      background-color: #e0e0e0;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="modulo">
+    <h1>TECH CONFERENCE 2026</h1>
+    <h2>Portale di Pre-iscrizione Ufficiale — Roma, Italia</h2>
+
+    <!-- Box informativo -->
+    <div class="box-info">
+      <p><b>Benvenuto alla Tech Conference 2026!</b> Compila il modulo sottostante per riservare il tuo posto.</p>
+      <ul>
+  
+
+    <form>
+      <!-- Dati Anagrafici -->
+      <fieldset>
+        <legend>Dati Anagrafici</legend>
+
+        <label for="nome">Nome e Cognome *</label>
+        <input type="text" id="nome" value="Noemi Vegetti" class="bordo-verde" required>
+
+        <label for="email">Indirizzo Email *</label>
+        <input type="email" id="email" value="Noemi.vegetti@erasmoinrete.it" class="bordo-blu" required>
+
+        <label for="telefono">Telefono</label>
+        <input type="tel" id="telefono" placeholder="3331234567">
+
+        <label for="anno">Anno di Nascita</label>
+        <input type="number" id="anno" placeholder="2005">
+      </fieldset>
+
+      <!-- Dettagli Partecipazione -->
+      <fieldset>
+        <legend>Dettagli Partecipazione</legend>
+
+        <label>Tipo di Biglietto</label>
+        <input type="radio" name="ticket" checked> Student
+        <input type="radio" name="ticket"> Standard
+        <input type="radio" name="ticket"> VIP
+
+        <label>Sessioni d'Interesse</label>
+        <input type="checkbox" checked> Intelligenza Artificiale
+        <input type="checkbox" checked> Sviluppo Web
+        <input type="checkbox"> Cybersecurity
+
+        <label for="tshirt">Taglia T-Shirt Omaggio</label>
+        <select id="tshirt">
+          <option>Taglia M</option>
+          <option>Taglia S</option>
+          <option>Taglia L</option>
+          <option>Taglia XL</option>
+        </select>
+
+        <label for="note">Note / Richieste Particolari</label>
+        <textarea id="note" placeholder="Inserisci qui eventuali esigenze..."></textarea>
+      </fieldset>
+
+      <!-- Consensi e Invio -->
+      <fieldset>
+        <legend>Consensi e Invio</legend>
+
+        <label style="font-weight: normal;">
+          <input type="checkbox" checked required> Accetto i termini e la privacy policy *
+        </label>
+
+        <div class="pulsanti">
+          <button type="submit" class="btn-invia">Invia Pre-iscrizione</button>
+          <button type="reset" class="btn-azzera">Azzera Campi</button>
+        </div>
+      </fieldset>
+    </form>
+  </div>
+
+</body>
+</html>

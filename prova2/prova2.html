@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tech Conference 2026 - Pre-iscrizione</title>
+  <link rel="stylesheet" href="prova2.css">
+</head>
+<body>
+
+  <div class="card">
+    
+    <!-- Intestazione -->
+    <header class="header">
+      <h1>TECH CONFERENCE 2026</h1>
+      <p class="subtitle">Portale di Pre-iscrizione Ufficiale — Roma, Italia</p>
+    </header>
+
+   
+    <!-- Modulo di iscrizione -->
+    <form>
+
+      <!-- Sezione Dati Anagrafici -->
+      <fieldset>
+        <legend>Dati Anagrafici</legend>
+
+        <div class="form-group">
+          <label for="nome">Nome e Cognome *</label>
+          <input type="text" id="nome" placeholder="Inserisci nome e cognome" required>
+        </div>
+
+        <div class="form-group">
+          <label for="email">Indirizzo Email *</label>
+          <input type="email" id="email" value="noemi.vegetti@erasmoinrete.it" class="input-focused" required>
+        </div>
+
+        <div class="form-group">
+          <label for="telefono">Telefono</label>
+          <input type="tel" id="telefono" placeholder="3355667788">
+        </div>
+
+        <div class="form-group">
+          <label for="anno">Anno di Nascita</label>
+          <input type="number" id="anno" placeholder="1999">
+        </div>
+      </fieldset>
+
+      <!-- Sezione Dettagli Partecipazione -->
+      <fieldset>
+        <legend>Dettagli Partecipazione</legend>
+
+        <div class="form-group">
+          <label>Tipo di Biglietto</label>
+          <div class="radio-group">
+            <label><input type="radio" name="ticket" value="student" checked> Student</label>
+            <label><input type="radio" name="ticket" value="standard"> Standard</label>
+            <label><input type="radio" name="ticket" value="vip"> VIP</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Sessioni d'Interesse</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" checked> Intelligenza Artificiale</label>
+            <label><input type="checkbox" checked> Sviluppo Web</label>
+            <label><input type="checkbox"> Cybersecurity</label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="tshirt">Taglia T-Shirt Omaggio</label>
+          <select id="tshirt">
+            <option>Taglia M</option>
+            <option>Taglia S</option>
+            <option>Taglia L</option>
+            <option>Taglia XL</option>
+          </select>
+        </div>
+
+      <!-- Sezione Consensi e Invio -->
+      <fieldset>
+        <legend>Consensi e Invio</legend>
+
+        <div class="form-group checkbox-privacy">
+          <label>
+            <input type="checkbox" checked required>
+            Accetto i termini e la privacy policy *
+          </label>
+        </div>
+
+        <div class="button-group">
+          <button type="submit" class="btn-primary">Invia Pre-iscrizione</button>
+          <button type="reset" class="btn-secondary">Azzera Campi</button>
+        </div>
+      </fieldset>
+
+    </form>
+
+  </div>
+
+</body>
+</html>
