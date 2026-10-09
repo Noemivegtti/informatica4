@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modulo di Contatto</title>
+  <!-- Collegamento al file CSS esterno -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <h1>Contattaci</h1>
+    <p class="subtitle">Inviaci un messaggio e ti risponderemo al più presto.</p>
+
+    <form action="#" method="POST">
+      <!-- Nome e Cognome -->
+      <div class="form-group">
+        <label for="fullname">Nome e Cognome <span class="asterisk">*</span></label>
+        <input type="text" id="fullname" name="fullname" placeholder="Es. emma hysa" required>
+      </div>
+
+      <!-- Email -->
+      <div class="form-group">
+        <label for="email">Email <span class="asterisk">*</span></label>
+        <input type="email" id="email" name="email" placeholder="emmahysa@erasmoinrete.it" required>
+      </div>
+
+      <!-- Motivo del contatto -->
+      <div class="form-group">
+        <label>Motivo del contatto:</label>
+        <div class="radio-group">
+          <label class="radio-option">
+            <input type="radio" name="reason" value="informazioni" checked> Informazioni
+          </label>
+          <label class="radio-option">
+            <input type="radio" name="reason" value="assistenza"> Assistenza
+          </label>
+        </div>
+      </div>
+
+      <!-- Messaggio -->
+      <div class="form-group">
+        <label for="message">Messaggio:</label>
+        <textarea id="message" name="message" placeholder="Scrivi qui..."></textarea>
+      </div>
+
+      <!-- Pulsanti -->
+      <div class="button-group">
+        <button type="submit" class="btn btn-submit">Invia</button>
+        <button type="reset" class="btn btn-cancel">Annulla</button>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
