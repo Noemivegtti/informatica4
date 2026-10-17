@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Multiverse Character Runner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="game-container">
+        <!-- Pannello superiore delle statistiche -->
+        <div id="stats-board">
+            <span id="game-part">PARTE 1</span> | Lvl: <span id="level">1</span>/5 | Mondo: <span id="world-name">-</span> | Salti: <span id="jumps-left">-</span> | 🏆 Coppe: <span id="trophies">0</span>
+        </div>
+        
+        <!-- Area di Gioco -->
+        <div id="game">
+            <!-- Schermata di Start Iniziale -->
+            <div id="start-screen">
+                <span class="giant-trophy">🏆</span>
+                <h2>MULTIVERSE RUNNER</h2>
+                <button id="start-button">START</button>
+            </div>
+
+            <!-- Il personaggio -->
+            <div id="character"></div>
+            
+            <!-- Ostacoli, Portale e Pavimento -->
+            <div id="block"></div>
+            <div id="portal"></div>
+            <div id="floor"></div>
+        </div>
+        
+        <!-- Schermata di Fine Gioco / Vittoria -->
+        <div id="game-over">
+            <h2 id="end-title">GAME OVER</h2>
+            <p id="end-text">Premi la BARRA SPAZIATRICE per ricominciare</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #050508;
+    color: #fff;
+    overflow: hidden;
+}
+
+#game-container {
+    position: relative;
+    text-align: center;
+}
+
+#stats-board {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+#game {
+    width: 600px;
+    height: 250px;
+    border: 4px solid #fff;
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    transition: background 0.5s ease;
+    background-repeat: repeat-x !important;
+    background-size: 400px 100% !important;
+}
+
+/* Animazione di scorrimento infinito dello scenario */
+@keyframes scrollBackground {
+    0% { background-position: 0px 0px; }
+    100% { background-position: -400px 0px; }
+}
+
+/* Schermata iniziale */
+#start-screen {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    z-index: 20;
+}
+#start-screen h2 { font-size: 28px; margin-bottom: 15px; letter-spacing: 2px; }
+.giant-trophy { font-size: 50px; display: inline-block; animation: trophyFloat 1s infinite alternate ease-in-out; }
+@keyframes trophyFloat { 0% { transform: translateY(0); } 100% { transform: translateY(-10px); } }
+
+#start-button { 
+    padding: 10px 25px; font-size: 20px; font-weight: bold; 
+    background-color: #f1c40f; border: 3px solid #d35400; 
+    border-radius: 4px; color: #111; cursor: pointer; 
+}
+#start-button:hover { transform: scale(1.1); background-color: #f39c12; }
+
+#character {
+    width: 40px; height: 40px; position: absolute; bottom: 20px; left: 50px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 34px; z-index: 15; font-weight: bold; border-radius: 4px;
+}
+.char-giudice-style { font-family: 'Times New Roman', Times, serif !important; color: #f1c40f; text-shadow: 2px 2px #000; }
+.char-lgbt-style { background: linear-gradient(to bottom, #ff3838, #ff9f43, #fec107, #4cd137, #00a8ff, #9c27b0); border: 2px solid #fff; }
+
+#floor { width: 100%; height: 20px; position: absolute; bottom: 0; z-index: 12; }
+
+#block { 
+    position: absolute; 
+    bottom: 20px; 
+    left: 600px; 
+    border-radius: 4px; 
+    z-index: 14 !important; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px; 
+    background-color: transparent !important;
+    border: none !important;
+}
+
+#portal { display: none; width: 45px; height: 90px; background: radial-gradient(circle, #e84393, #6c5ce7, transparent); border: 3px dashed #fff; border-radius: 50%; position: absolute; bottom: 20px; left: 600px; animation: portalPulse 0.5s infinite alternate; z-index: 11; }
+@keyframes portalPulse { 0% { transform: scale(0.9); } 100% { transform: scale(1.1); } }
+
+.jump { animation: jumpAnimation 0.52s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+@keyframes jumpAnimation { 0% { bottom: 20px; } 45% { bottom: 175px; } 55% { bottom: 175px; } 100% { bottom: 20px; } }
+
+#game-over { display: none; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0, 0, 0, 0.95); padding: 20px 40px; border: 3px solid #e74c3c; border-radius: 8px; z-index: 30; }
+
+/* ==========================================================
+   SFONDI TEMATICI ANIMATI - PARTE 1
+   ========================================================== */
+.sky-minion {
+    background-image: radial-gradient(circle at 200px 60px, #fff 20px, transparent 21px), radial-gradient(circle at 230px 70px, #fff 25px, transparent 26px), linear-gradient(45deg, #f1c40f 20%, transparent 21%), linear-gradient(to bottom, #3498db, #87ceeb);
+    animation: scrollBackground 3.5s linear infinite !important;
+}
+.floor-minion { background-color: #2c3e50; border-top: 4px solid #f1c40f; }
+
+.sky-fumogeno {
+    background-image: radial-gradient(circle at 100px 70px, #222 40px, transparent 41px), radial-gradient(circle at 280px 100px, #333 50px, transparent 51px), radial-gradient(circle at 160px 120px, #444 35px, transparent 36px), linear-gradient(to bottom, #0f1416, #2d3436);
+    animation: scrollBackground 1.8s linear infinite !important;
+}
+.floor-fumogeno { background-color: #555; border-top: 4px solid #000; }
+
+.sky-postino {
+    background-image: radial-gradient(circle at 120px 190px, #27ae60 70px, transparent 71px), radial-gradient(circle at 300px 210px, #1e824c 90px, transparent 91px), radial-gradient(circle at 80px 50px, #fff 15px, transparent 16px), linear-gradient(to bottom, #74b9ff, #ffeaa7);
+    animation: scrollBackground 5s linear infinite !important;
+}
+.floor-postino { background-color: #2ecc71; border-top: 4px solid #d35400; }
+
+.sky-giudice {
+    background-image: linear-gradient(to right, #2c3e50 0px, #2c3e50 30px, #1e272e 31px, #1e272e 40px, transparent 41px), linear-gradient(to top, #7f8c8d 0px, #7f8c8d 60px, transparent 61px), linear-gradient(to bottom, #111, #34495e);
+    animation: scrollBackground 4s linear infinite !important;
+}
+.floor-giudice { background-color: #a04000; border-top: 4px solid #f1c40f; }
+
+.sky-scemo {
+    background-image: linear-gradient(45deg, #fd79a8 25%, transparent 25%, transparent 75%, #fd79a8 75%), linear-gradient(45deg, #fd79a8 25%, #00cec9 25%, #00cec9 75%, #fd79a8 75%);
+    background-size: 50px 50px !important;
+    animation: scrollBackground 1.5s linear infinite !important;
+}
+.floor-scemo { background-color: #ffeaa7; border-top: 4px solid #fdcb6e; }
+
+/* ==========================================================
+   SFONDI TEMATICI ANIMATI - PARTE 2
+   ========================================================== */
+.sky-salvagay {
+    background-image: linear-gradient(to right, #ff7675 0px, #ff7675 40px, #ffeaa7 41px, #ffeaa7 80px, #55efc4 81px, #55efc4 120px, #74b9ff 121px, #74b9ff 160px, #a29bfe 161px, #a29bfe 200px), radial-gradient(circle at 50% 50%, rgba(255,255,255,0.3) 10px, transparent 30px);
+    background-size: 400px 100%, 80px 80px !important;
+    animation: scrollBackground 2s linear infinite !important;
+}
+.floor-salvagay { background-color: #ffffff; border-top: 4px solid #e84393; }
+
+/* 2. GNOMO IPER-REALISTICO: Foresta profonda multilivello con cielo stellato, luna, montagne remote, fogliame fittissimo, cespugli e piante a terra */
+.sky-gnomo {
+    background-image: 
+        radial-gradient(circle at 350px 45px, #f1c40f 14px, transparent 15px), /* Luna piena in alto a destra */
+        radial-gradient(circle at 40px 30px, #fff 2px, transparent 3px), /* Cielo stellato iper dettagliato */
+        radial-gradient(circle at 120px 70px, #fff 2px, transparent 3px),
+        radial-gradient(circle at 180px 20px, #fff 1px, transparent 2px),
+        radial-gradient(circle at 280px 80px, #fff 3px, transparent 4px),
+        radial-gradient(circle at 310px 40px, #fff 1px, transparent 2px),
+        radial-gradient(circle at 90px 185px, #d63031 16px, transparent 17px),  /* Cappelli dei Funghi Giganti sottostanti */
+        radial-gradient(circle at 260px 190px, #e74c3c 14px, transparent 15px),
+        linear-gradient(to right, transparent 50px, #27ae60 50px, #27ae60 130px, transparent 130px),  /* Chioma Albero Profondo 1 */
+        linear-gradient(to right, transparent 75px, #5c4037 75px, #5c4037 105px, transparent 105px),   /* Tronco Albero Profondo 1 */
+        linear-gradient(to right, transparent 250px, #1e824c 250px, #1e824c 350px, transparent 350px), /* Chioma Albero 2 */
+        linear-gradient(to right, transparent 285px, #4e342e 285px, #4e342e 315px, transparent 315px),  /* Tronco Albero 2 */
+        linear-gradient(to right, transparent 160px, #145a32 160px, #145a32 210px, transparent 210px), /* Cespugli e piante selvatiche basse */
+        linear-gradient(to bottom, #040609 30%, #0d1b2a 70%, #1b263b 100%); /* Atmosfera sfumata della notte silvestre */
+    background-size: 400px 100% !important;
+    animation: scrollBackground 4s linear infinite !important;
+}
+.floor-gnomo { background-color: #196f3d; border-top: 4px solid #f1c40f; }
+
+.sky-vacca {
+    background-image: linear-gradient(to bottom, transparent 150px, #8d6e63 150px, #8d6e63 155px, transparent 156px), linear-gradient(to right, #5d4037 0px, #5d4037 15px, transparent 16px), radial-gradient(circle at 150px 60px, #fff 30px, transparent 31px), linear-gradient(to bottom, #74b9ff, #a29bfe);
+    background-size: 400px 100%, 60px 100%, 400px 100%, 100% 100% !important;
+    animation: scrollBackground 3.8s linear infinite !important;
+}
+.floor-vacca { background-color: #27ae60; border-top: 5px dashed #fff; }
+
+.sky-piccione {
+    background-image: linear-gradient(to right, #f1c40f 10px, transparent 10px), linear-gradient(to right, #1e272e 0px, #1e272e 80px, transparent 81px), linear-gradient(to right, #2d3436 150px, #2d3436 260px, transparent 261px), linear-gradient(to bottom, #0f1416, #2c3e50);
+    background-size: 40px 30px, 400px 100%, 400px 100%, 100% 100% !important;
+    animation: scrollBackground 2.2s linear infinite !important;
+}
+.floor-piccione { background-color: #b2bec3; border-top: 4px solid #636e72; }
+
+/* 5. Cane: Riparato. Lo sfondo e gli ostacoli mantengono la massima visibilità */
+.sky-cane {
+    background-image: 
+        radial-gradient(circle at 200px 190px, #000 15px, transparent 16px), 
+        linear-gradient(to right, transparent 160px, #d63031 160px, #d63031 240px, transparent 240px), 
+        linear-gradient(to bottom, #ff9f43, #f39c12); 
+    background-size: 400px 100% !important;
+    animation: scrollBackground 2.5s linear infinite !important;
+}
+.floor-cane { background-color: #5c4037; border-top: 4px solid #f1c40f; }
