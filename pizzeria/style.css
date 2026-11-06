@@ -1,0 +1,117 @@
+/* 1. Reset Generale e Stili Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8fafc;
+  color: #334155;
+  padding: 40px 20px;
+}
+
+/* 2. Contenitore Principale (Card) */
+.card {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 24px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+}
+
+/* 3. Titoli, Paragrafi e Sezioni del Form */
+h1 {
+  margin-bottom: 6px;
+  color: #0f172a;
+}
+
+p {
+  margin-bottom: 20px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.campo {
+  margin-bottom: 16px;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+/* 4. Dimensionamento Campi di Testo (100%) */
+input[type="text"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+/* 5. Flexbox (Opzioni Radio e Pulsanti) */
+.opzioni {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.opzioni label {
+  font-weight: normal;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 0;
+}
+
+.pulsanti {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+button {
+  padding: 10px 18px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn-invia {
+  background-color: #16a34a;
+  color: #ffffff;
+}
+
+.btn-annulla {
+  background-color: #e2e8f0;
+  color: #475569;
+}
+
+/* 6. Pseudoclassi Dinamiche (:focus e :hover) */
+input[type="text"]:focus,
+input[type="tel"]:focus,
+textarea:focus {
+  border-color: #2563eb;
+  outline: 2px solid #93c5fd;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+.btn-invia:hover {
+  background-color: #15803d;
+}
+
+.btn-annulla:hover {
+  background-color: #cbd5e1;
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pizzeria Craft - Ordine Online</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="card">
+    <h1>Ordina la tua Pizza</h1>
+    <p>Compila i campi per prenotare il tuo tavolo o il ritiro al banco.</p>
+
+    <form action="#" method="post">
+      
+      <!-- Campo Nome e Cognome -->
+      <div class="campo">
+        <label for="nome">Nome e Cognome *</label>
+        <input type="text" id="nome" name="nome" placeholder="Es. Mario Rossi" required>
+      </div>
+
+      <!-- Campo Telefono -->
+      <div class="campo">
+        <label for="telefono">Telefono *</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="333 1234567" required>
+      </div>
+
+      <!-- Modalità di ritiro -->
+      <div class="campo">
+        <label>Modalità di ritiro:</label>
+        <div class="opzioni">
+          <label>
+            <input type="radio" name="modalita" value="tavolo" checked> Al Tavolo
+          </label>
+          <label>
+            <input type="radio" name="modalita" value="asporto"> Asporto
+          </label>
+        </div>
+      </div>
+
+      <!-- Note sull'ordine -->
+      <div class="campo">
+        <label for="note">Note sull'ordine:</label>
+        <textarea id="note" name="note" rows="3" placeholder="Ingredienti extra o allergie..."></textarea>
+      </div>
+
+      <!-- Pulsanti di azione -->
+      <div class="pulsanti">
+        <button type="reset" class="btn-annulla">Annulla</button>
+        <button type="submit" class="btn-invia">Invia Ordine</button>
+      </div>
+
+    </form>
+  </div>
+
+</body>
+</html>
